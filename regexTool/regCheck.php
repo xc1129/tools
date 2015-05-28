@@ -10,6 +10,6 @@ echo "\n";
 $regex1=new regexTool();
 $pattern='/^(\w+)\.(\w+)\.com$/';
 $subject='www.test.com';
-$r2=$regex1->regex($pattern,$subject);
+$r2=$regex1->check($pattern,$subject);
 echo $r2;
 ?>

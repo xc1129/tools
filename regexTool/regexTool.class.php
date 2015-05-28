@@ -17,7 +17,7 @@ class regexTool{
         $this->fixMode=$fixMode;
     }
 
-    public function regex($pattern,$subject){
+    private function regex($pattern,$subject){
         if (array_key_exists(strtolower($pattern),$this->validate))
         {
             $pattern=$this->validate[$pattern].$this->fixMode;
