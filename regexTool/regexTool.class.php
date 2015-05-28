@@ -1,6 +1,6 @@
 <?php
 
-class regexTool(
+class regexTool{
     private $validate = array(
         'moblie'=>'/^1(3|5|7|8)\d{9}$/',
         'require'=>'/.+/',
@@ -17,7 +17,7 @@ class regexTool(
         $this->fixMode=$fixMode;
     }
 
-    private function regex($pattern,$subject){
+    public function regex($pattern,$subject){
         if (array_key_exists(strtolower($pattern),$this->validate))
         {
             $pattern=$this->validate[$pattern].$this->fixMode;
@@ -31,7 +31,7 @@ class regexTool(
     private function getRegexResult(){
         if($this->returnMatchResult)
         {
-            reutrn $this->matches;
+            return $this->matches;
         }
         else
         {
@@ -75,4 +75,6 @@ class regexTool(
     {
         return $this->regex($pattern,$subject);
     }
-)
+}
+
+?>
